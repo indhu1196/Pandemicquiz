@@ -1,0 +1,168 @@
+#disqus_thread{ display:none !important;}
+.clearfixsol:after { content: ""; display: table; clear: both; }
+    /* #disqus_thread, .td-main-sidebar, .td-footer-wrapper, .td-sub-footer-container { display:none !important;} */
+#tfwrapper {height:auto;}
+#tfwrapper .firstcharacter {
+        color: #000000;
+        float: left;
+        font-family: Georgia;
+        font-size: 75px;
+        line-height: 60px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+    }
+#tfwrapper #tfbody{ margin: 15px;}
+#tfwrapper #tfbody, #tfwrapper #tfheader{ margin: 15px;}
+#tfwrapper .hidden{ display:none !important; }
+#tfwrapper h1 { font-family: 'Quicksand', sans-serif; font-weight:700; font-size: 52px; line-height: 55px; text-align: center; }
+#tfwrapper h2, #tfwrapper h3, #tfwrapper h4, #tfwrapper h5, #tfwrapper h6 { font-family: 'Arapey', serif;  text-align: center; }
+#tfwrapper h2{ font-size: 48px; color: #bfbebe;}
+#tfwrapper h2.iframeheadline{     text-align: left; font-family: 'Roboto', sans-serif; font-size: 36px; max-width: 960px; width: 100%; margin: 0px auto; line-height: 26px; font-weight: 400; color: #333333;}
+#tfwrapper h3{ font-size: 34px; line-height: 36px; max-width: 750px; margin: 15px auto;}
+#tfwrapper p.tfauthor { font-family: 'Arapey', serif;  font-style:italic; font-size: 20px; font-weight: 400; margin-bottom: 18px; text-align:center; }
+#tfwrapper p.intro {  font-family: 'Arapey', serif; font-size: 24px; color: #888888; line-height: 25px;}
+#tfwrapper p.dataupdated {      font-weight: 300; font-family: 'Roboto', sans-serif; font-size: 14px; text-align:center; margin: 0px auto;}
+#tfwrapper p {  text-align: left; font-family: 'Roboto', sans-serif; font-size:18px; max-width: 525px; width: 100%;margin: 35px auto;    line-height: 26px; font-weight: 300;}
+#tfwrapper p#highlights {font-family: 'Roboto', sans-serif; font-size:22px; line-height: 30px; font-weight: 700; color: #ff9900;}
+#tfwrapper img {  max-width: 525px; width: 100%;margin: 15px auto 35px auto; display:block;}
+#tfwrapper iframe {  max-width: 960px; width: 100%;margin: 15px auto 35px auto; display:block;}
+#tfwrapper img.gitag {  width: 149px; margin: 40px auto;}
+#tfwrapper .dividercontent { width:100%;margin: 15px auto; max-width:1400px; }
+#tfwrapper .dividercontent .grid { width:100%; height: auto; }
+#tfwrapper .dividercontent .grid .griditem { float:left; width:25%; margin:15px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+#tfwrapper .dividercontent .grid .griditem:first-child { margin-left:0px; }
+#tfwrapper .dividercontent .grid .griditem:last-child { margin-right:0px; }
+#tfwrapper .dividercontent .grid .griditem img{ width:100%; }
+#tfwrapper .storynav{ margin:0 auto; height:auto; max-width: 525px; width: 100%; text-align:center; line-height: 0px; margin-top: -15px;}
+#tfwrapper .storynav .col{ float:left; width:33.3%; height:90px; }
+#tfwrapper .storynav .col a{margin-top: 40px; display: block; color:#f72c2c; text-decoration: none; font-weight:bold; }
+#tfwrapper .nextstory {text-align:center; }
+#tfwrapper .nextstory a{color:#f72c2c; text-decoration: none; font-weight:bold; }
+#tfwrapper .maincopy-head {    line-height: 48px; font-size: 48px; color: #000000; max-width: 845px; margin: 15px auto 35px auto; width: 100%;}
+   #tfwrapper .maincopy-subheads{width: 100%; max-width: 375px; margin: 15px auto;font-size: 34px; min-height: 80px;
+    font-family: 'Arapey', serif; line-height: 35px;}
+#tfwrapper .maincopy-subheads span{    font-size: 95px; font-family: 'Arapey', serif; color: #999999; border-right: 1px solid #999999; float: left; padding-right: 10px; margin-right: 15px; height: auto; line-height: 70px;}
+#tfwrapper .alsoread{ font-weight: bold;}
+#tfwrapper .alsoread a{ color: #f72c2c;  text-decoration: none;}
+.twitter-tweet.twitter-tweet-rendered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1#ques {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #333333;
+}
+#options {
+    text-align: center;
+}
+#options label {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #206d7a;
+}
+#desc, #subFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#India_map {
+    width: 250px !important;
+    height: auto;
+}
+#India_map img {
+    max-width: 100%;
+}
+
+.range__slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: .4em 0;
+    width: 100%;
+}
+.range__slider:focus {
+    outline: none;
+}
+.range__slider::-webkit-slider-runnable-track {
+    background-color: #444444;
+    height: .3em;
+    margin: .4em 0;
+    border-radius: 2px;
+}
+.range__slider::-moz-range-track {
+    background-color: #444444;
+    height: .3em;
+    border-radius: 2px;
+}
+.range__slider::-moz-focus-outer {
+    border: 0;
+}
+.range__slider::-ms-track {
+    background-color: #444444;
+    height: .3em;
+    margin: .1em 0;
+    border-radius: 2px;
+}
+.range__slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    text-align: center;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: -0.5em;
+}
+.range__slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    text-align: center;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.range__slider::-ms-thumb {
+    margin: 0;
+}
+.range {
+    position: relative;
+
+}
+.bubble {
+    background: red;
+    color: white;
+    padding: 4px 12px;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    
+
+/* Mobile Devices */
+@media screen and (min-width: 300px) and (max-width: 650px){
+    #tfwrapper h2 {
+        font-size: 45px;
+        line-height: 30px;
+    }
+}
+
+
