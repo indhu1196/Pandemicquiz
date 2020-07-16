@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map{
+            width: 800px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        svg{
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="map" id="india"></div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://thefederal.com/embed/common-js/d3.v4.min.js"></script>
+	<script src="https://thefederal.com/embed/corona-dashboard-master/js/d3-tip.js"></script>
+	<script src="https://d3js.org/topojson.v2.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://thefederal.com/embed/common-js/underscore-min.js"></script>
+    <script src="js/map.js"></script>
+    <script>
+        drawIndiaMap("#india")
+    </script>
+</body>
+</html>

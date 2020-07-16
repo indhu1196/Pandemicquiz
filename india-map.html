@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mapcontainer{
+            width: 600px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .india-map path{
+            transition: all .2s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mapcontainer">
+        <div id="options">
+            <input type="radio" id="delhi" name="state" value="delhi">
+            <label for="delhi">Delhi</label>
+            <input type="radio" id="gujarat" name="state" value="gujarat">
+            <label for="gujarat">Gujarat</label>
+            <input type="radio" id="mumbai" name="state" value="mumbai">
+            <label for="mumbai">Mumbai</label>
+            <input type="radio" id="maharashtra" name="state" value="maharashtra">
+            <label for="maharashtra">Maharashtra</label>
+            <input type="radio" id="karnataka" name="state" value="karnataka">
+            <label for="karnataka">Karnataka</label>
+            <input type="radio" id="tamilnadu" name="state" value="tamilnadu">
+            <label for="tamilnadu">Tamilnadu</label>
+        </div>
+        <div class="map" id="india"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://thefederal.com/embed/common-js/d3.v4.min.js"></script>
+	<script src="https://thefederal.com/embed/corona-dashboard-master/js/d3-tip.js"></script>
+	<script src="https://d3js.org/topojson.v2.min.js"></script>
+	<!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
+    <!-- <script src="https://thefederal.com/embed/common-js/underscore-min.js"></script> -->
+    <script src="js/map.js"></script>
+    <script>
+        var dataobj = {
+            "Delhi": 17,
+            "Gujarat": "Ended",
+            "Mumbai": 14,
+            "Maharashtra": 61,
+            "Karnataka": "Beginning",
+            "Tamilnadu": "14 to 28"
+        }
+        var datacolor = {
+            "delhi": "#206d7a",
+            "gujarat": "#1f8a70",
+            "mumbai": "#206d7a",
+            "maharashtra": "#0c5363",
+            "karnataka": "#004358",
+            "tamilnadu": "#206d7a"
+        }
+        var radioValue;
+        $("input[type='radio']").click(function(){
+                radioValue = $("input[name='state']:checked").val();
+                // console.log(radioValue)
+                // console.log($("."+radioValue))
+
+                //trigger map
+                $(".city").css("fill", "#333333")
+                $(".state").css("fill", "#666666")
+                d3.selectAll(".maptext").attr("fill", "none")
+                d3.select("."+radioValue+"txt").attr("fill", "black")
+                console.log(datacolor[radioValue])
+                $("."+radioValue).css("fill", datacolor[radioValue])
+        });
+        drawIndiaMap("#india")
+    </script>
+</body>
+</html>
