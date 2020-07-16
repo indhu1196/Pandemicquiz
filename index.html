@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="css/style.css">
 <div id="tfwrapper">
     <div id="tfheader">
-        <h1 class="maincopy-head">Dummy Header</h1>
+        <h1 class="maincopy-head">Dummy head</h1>
         <p class="tfauthor">Author</p>
-        //<img src="https://thefederal.com/wp-content/uploads/2020/06/nuclear-02-copy.jpg" alt="">
+        <img src="https://thefederal.com/wp-content/uploads/2020/06/nuclear-02-copy.jpg" alt="">
     </div>
     <div id="tfbody">
        <p>The end of the Cold War three decades back has not ended nuclear build-up in the world. Nuclear weapon states are modernising their existing air-, sea- and land-based delivery vehicles and warheads, clearly with the intention of maintaining them for the long-term future. Star Wars remains not just a movie metaphor and space-based weapons platforms might soon become a reality. The nuclear arms race has now extended to developing missile shields and evading such shields of rival powers.</p>
@@ -43,10 +43,12 @@
                 <div id="rightSide">
                     <div id="slider">
                         <form>
+                            <!-- <span>Your guess</span> -->
                             <div class='range'>
-                                <input class='range__amount' id='amount' oninput='slider.value=amount.value' type='text' value='64'>
-                                <input class='range__slider' id='slider' max='365' min='0' oninput='amount.value=slider.value' type='range' value='64'>
-                              <output class="bubble" style="display: none;">&#x25B2;</output>
+                                
+                                <input class='range__amount' id='amount' oninput='slider.value=amount.value' onclick='javascript: this.value = ""'  type='text' value='14'> <span>Days</span>
+                               <input class='range__slider' id='slider' max='365' min='0' oninput='amount.value=slider.value' type='range' value='14'>
+                              <output class="bubble" >&#x25B2;</output>
                             </div>
                           </form> 
                     </div>
@@ -54,8 +56,8 @@
                     <h2>X <span id="validate">WRONG ANSWER</span></h2>
                     <div id="subFlex">
                         <div id="daysEst">
-                            <p>According to estimate the <br />pandemic in Mumbai will end in</p>
-                            <h4> 14 days</h4>
+                            <p>According to estimate the <br />pandemic in <span id="plcName">Mumbai </span> will end in</p>
+                            <h4> <span>14</span> days</h4>
                         </div>
                         <div id="constData">
                             <p>Most of India in</p>
@@ -72,5 +74,4 @@
     </div>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-              
 <script src="js/script.js"></script>

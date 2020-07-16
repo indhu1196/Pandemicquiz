@@ -115,11 +115,11 @@ h1#ques {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #fff;
+    background-color: transparent;
     text-align: center;
     width: 1.2em;
     height: 1.2em;
-    border: 1px solid #cccccc;
+    border: 1px solid transparent;
     border-radius: 50%;
     cursor: pointer;
     box-sizing: border-box;
@@ -143,15 +143,20 @@ h1#ques {
 }
 .range {
     position: relative;
-
+    text-align: center;
+}
+.range__amount {
+    width: 7%;
+    border: none;
 }
 .bubble {
-    background: red;
-    color: white;
+    /* background: red; */
+    color: red;
     padding: 4px 12px;
     position: absolute;
     border-radius: 4px;
     left: 50%;
+    bottom: -15px;
     transform: translateX(-50%);
 }
 
