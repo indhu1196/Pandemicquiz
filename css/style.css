@@ -299,4 +299,65 @@ h2#validate {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .mapcontainer {
+        width: 250px;
+        margin: 4% 0 0 0;
+    }
+    #desc {
+        flex-direction: column;
+    }
+    #rightSide {
+        max-width: 85%;
+    }
+    #options label {
+        font-size: 14px;
+    }
+    #guess {
+        left: -26%;
+        font-size: 11px;
+    }
+    .range {
+        left: 10%;
+    }
+    .range__amount {
+        width: 16%;
+    }
+    .range__amount, .days {
+        font-size: 20px;
+    }
+    .limits {
+        font-size: 12px;
+    }
+    #submitBtn {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    h2#validate {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    #daysEst p, #constData p:first-child {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    #constData h4 {
+        font-size: 50px;
+        line-height: 80px;
+    }
+    #daysEst h4 {
+        font-size: 39px;
+        line-height: 80px;
+    }
+    #constData p#months {
+        font-size: 26px;
+    }
+    #daysEst {
+        padding-right: 6%;
+    }
+    #constData {
+        padding-left: 5%;
+    }
+}
+
 
