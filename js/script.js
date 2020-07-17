@@ -33,34 +33,46 @@ $("input[type='radio']").click(function(){
 });
 
 $("#submitBtn").click(function() {
-    console.log(radioValue, valueSelected)
+    // console.log(radioValue, valueSelected)
+    $(".submitwrap").hide();
+    $("#validate").css("display", "block");
+    $("#subFlex").css("display", "flex");
+    $(".reloadwrap").css("display", "block");
+     
     if( radioValue == "mumbai" && valueSelected == "14") {
         $("#validate span").text("RIGHT ANSWER");
+        $("#validate").css("color", "#349A05")
         $("#plcName").text(radioValue);
         $("#daysEst h4 ").text("14 days");
         console.log("success");
     } else if( radioValue == "delhi" && valueSelected == "18") {
         $("#validate").text("RIGHT ANSWER")
+        $("#validate").css("color", "#349A05")
         $("#plcName").text(radioValue)
         $("#daysEst h4 ").text("18 days");
         // console.log("success");
     } else if( radioValue == "gujarat" && valueSelected == "0") {
         $("#validate").text("RIGHT ANSWER")
+        $("#validate").css("color", "#349A05")
         $("#plcName").text(radioValue)
+        $("#daysEst p").html("<p>According to estimate the <br />pandemic in <span id='plcName'>Gujarat </span></p>")
         $("#daysEst h4 ").text("Ended");
         // console.log("success");
     } else if( radioValue == "maharashtra" && valueSelected == "61") {
         $("#validate").text("RIGHT ANSWER")
+        $("#validate").css("color", "#349A05")
         $("#plcName").text(radioValue)
         $("#daysEst h4 ").text("61 days");
         // console.log("success");
     } else if( radioValue == "tamilnadu" &&  valueSelected > 14 && valueSelected < 28) {
         $("#validate").text("RIGHT ANSWER")
+        $("#validate").css("color", "#349A05")
         $("#plcName").text(radioValue)
         $("#daysEst h4 ").text("14 to 28 days");
         // console.log("success");
-    } else if( radioValue == "karnataka" && valueSelected == "0") {
+    } else if( radioValue == "karnataka" && valueSelected > 0 && valueSelected < 20) {
         $("#validate").text("RIGHT ANSWER")
+        $("#validate").css("color", "#349A05")
         $("#plcName").text(radioValue)
         $("#daysEst h4 ").text("Beginning");
         // console.log("success");
@@ -81,6 +93,7 @@ $("#submitBtn").click(function() {
         // console.log("success");
     } else if( radioValue == "gujarat") {
         $("#plcName").text(radioValue)
+        $("#daysEst p").html("<p>According to estimate the <br />pandemic in <span id='plcName'>Gujarat </span></p>")
         $("#daysEst h4 ").text("Ended");
         // console.log("success");
     } else if( radioValue == "maharashtra") {
