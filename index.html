@@ -44,15 +44,15 @@
                         <div id="slider">
                             <form>
                                 <div class='range'>
-                                    <span style="left: 0;" class="limits">2 Days</span>
-                                    <input class='range__amount' id='amount' oninput='slider.value=amount.value' onclick='javascript: this.value = ""'  type='text' value='14'> <span class="days">Days</span> <span style="right: 0; " class="limits">365 days</span>
-                                    <span id="guess">Your guess</span>
-                                    <input class='range__slider' id='slider' max='365' min='0' oninput='amount.value=slider.value' type='range' value='14'>
+                                    <span style="left: 0;" class="limits">0 Days</span>
+                                    <input class='range__amount' id='amount' oninput='slider.value=amount.value' onclick='javascript: this.value = ""'  type='text' value='0'> <span class="days">Days</span> <span style="right: 0; " class="limits">365 days</span>
+                                    <span id="guess">Your <br />guess</span>
+                                    <input class='range__slider' id='slider' max='365' min='0' oninput='amount.value=slider.value' type='range' value='0'>
                                 <output class="bubble" >&#x25B2;</output>
                                 </div>
                             </form> 
                         </div>
-                        <div class="btnwrap">                   
+                        <div class="btnwrap submitwrap">                   
                             <button id="submitBtn"> SUBMIT</button>
                         </div>
                         <h2 id="validate"> <span></span></h2>
@@ -67,7 +67,7 @@
                                 <p id="months">months</p>
                             </div>
                         </div>
-                        <div class="btnwrap">
+                        <div class="btnwrap reloadwrap">
                             <button id="reloadBtn"><img src="img/replay.png" />Reload</button>
                         </div>
                     </div>
@@ -108,8 +108,8 @@
             //trigger map
             $(".city").css("fill", "#333333")
             $(".state").css("fill", "#666666")
-            d3.selectAll(".maptext").attr("fill", "none")
-            d3.select("."+radioValue+"txt").attr("fill", "black")
+            d3.selectAll(".maptext").style("opacity", "0")
+            d3.select("."+radioValue+"txt").style("opacity", "1")
             console.log(datacolor[radioValue])
             $("."+radioValue).css("fill", datacolor[radioValue])
     });
@@ -119,7 +119,10 @@
 <script>
     $(document).ready(function() {
         $('#reloadBtn').on('click', function() {
-            $('body').load("index.html");
+            $('body').load("index.html" );
+            // $("#validate").css("display", "block");
+            // $("#subFlex").css("display", "flex");
+            // $("#reloadBtn").css("display", "block");
         });
     });
 </script>
