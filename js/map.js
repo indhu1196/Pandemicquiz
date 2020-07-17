@@ -20,12 +20,20 @@ function drawIndiaMap(selector){
         .attr("r", "3")
         .attr("fill", "#333333")
     
-    svg.append("text")
+    // svg.append("text")
+    svg.append("foreignObject")
+    .attr("x", 55)
+    .attr("y", 220)
+    .attr("width", "100px")
+    .attr("height", "1px")
+    .attr("class", "svg-tooltip")
+    .append('xhtml:div')
         .attr("class","maptext mumbaitxt")
         .attr("transform", "translate(55,220)")
         .attr("font-family", "Rubik")
         .attr("font-size", ".8em")
         .attr("fill", "none")
+        .style("opacity",0)
         .text("Mumbai")
 
     var formatComma = d3.format(",")
@@ -57,20 +65,34 @@ function drawIndiaMap(selector){
         var text = g.selectAll("text")
             .data(statewise)
             .enter()
-            .append("text")
-            .attr("fill", "none")
-            .attr("font-family", "Rubik")
-            .attr("font-size", ".8em")
+            // .append("text")
+            // .attr("fill", "none")
+            // .attr("font-family", "Rubik")
+            // .attr("font-size", ".8em")
+            .append("foreignObject")
+            .attr("x", function(d) { 
+                var centroid = geoPath.centroid(d);
+                return centroid[0];
+            })
+            .attr("y", function(d) { 
+                var centroid = geoPath.centroid(d);
+                return centroid[1];
+            })
+            .attr("width", "100px")
+            .attr("height", "1px")
+            .attr("class", "svg-tooltip")
+            .append('xhtml:div')
             .attr("class", function(d,i){
                 var statename = d.properties.ST_NM;
                 return "maptext "+ statename.replace(/ /g, "").toLowerCase()+ "txt"
             })
-            .attr("transform", function(d) { 
-                var centroid = geoPath.centroid(d);
-                return "translate(" + (centroid[0]+25) + "," + centroid[1] + ")"
-            })
-            .attr("text-anchor", "middle")
-            .attr("dy", ".35em")
+            // .attr("transform", function(d) { 
+            //     var centroid = geoPath.centroid(d);
+            //     return "translate(" + (centroid[0]+25) + "," + centroid[1] + ")"
+            // })
+            // .attr("text-anchor", "middle")
+            // .attr("dy", ".35em")
+            .style("opacity",0)
             .text(function(d) {
                 return d.properties.ST_NM;
             });
