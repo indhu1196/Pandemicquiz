@@ -108,8 +108,10 @@ $("#submitBtn").click(function() {
         $("#plcName").text(radioValue)
         $("#daysEst h4 ").text("Beginning");
         // console.log("success");
-    } else {
+    } else if(radioValue == "undefined") {
         $("#validate").text("Please select any of the options");
+        // $("#validate").css("display", "none");
+        $("#subFlex").css("display", "none");
     }
 })
 
