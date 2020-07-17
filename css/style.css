@@ -59,6 +59,7 @@ h1#ques {
 }
 #options {
     text-align: center;
+    margin-top: 2%;
 }
 #options label {
     font-family: 'Rubik', sans-serif;
@@ -67,9 +68,14 @@ h1#ques {
     line-height: 25px;
     color: #206d7a;
 }
-#desc, #subFlex {
+#desc {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+#subFlex {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -146,8 +152,9 @@ h1#ques {
     text-align: center;
 }
 .range__amount {
-    width: 7%;
+    width: 10%;
     border: none;
+    outline: none;
 }
 .bubble {
     /* background: red; */
@@ -159,9 +166,131 @@ h1#ques {
     bottom: -15px;
     transform: translateX(-50%);
 }
+#rightSide {
+    margin-top: 2%;
+    max-width: 40%;
+}
+.mapcontainer{
+    width: 370px;
+    height: auto;
+    margin: 2% 8% 0 0;
+}
 
-    
+.india-map path, .india-map text{
+    transition: all .2s;
+}
 
+#guess {
+    position: absolute;
+    left: -18%;
+    bottom: 9%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+}
+.limits {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6d6d6d;
+    position: absolute;
+    bottom: 28%;
+}
+.range__amount, .days {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #ff0000;
+}
+h2#validate {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #ff0000;
+    min-height: 25px;
+}
+#daysEst {
+    padding-right: 12%;
+    border-right: 1px solid #515151;
+}
+#constData {
+    padding-left: 2%;
+}
+#daysEst p, #constData p:first-child {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #515151;
+    text-align: center;
+    margin: 0;
+}
+#daysEst h4 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 80px;
+    color: #515151;
+    margin: 0;
+}
+#constData h4 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 80px;
+    color: #515151;
+    margin: 0;
+}
+#constData p#months {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+    color: #515151;
+    text-align: center;
+    margin: 0;
+}
+#plcName {
+    text-transform: capitalize;
+}
+.btnwrap {
+    text-align: center;
+}
+#submitBtn {
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+}
+.btnwrap img {
+    display: inline !important;
+    margin: 10px 5px -2px 0 !important;
+    width: 15px !important;
+}
+#validate img {
+    display: inline !important;
+    width: 35px !important;
+    margin: 2% 2% -11px 0 !important;
+}
+#reloadBtn {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    color: #2ec8ff;
+    background: transparent;
+}
 /* Mobile Devices */
 @media screen and (min-width: 300px) and (max-width: 650px){
     #tfwrapper h2 {
