@@ -75,8 +75,8 @@ h1#ques {
 }
 #subFlex {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: center; */
 }
 
 #India_map {
@@ -91,8 +91,9 @@ h1#ques {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: .4em 0;
+    margin: 0;
     width: 100%;
+    font-size: 35px;
 }
 .range__slider:focus {
     outline: none;
@@ -101,7 +102,7 @@ h1#ques {
     background-color: #444444;
     height: .3em;
     margin: .4em 0;
-    border-radius: 2px;
+    border-radius: 15px;
 }
 .range__slider::-moz-range-track {
     background-color: #444444;
@@ -125,6 +126,7 @@ h1#ques {
     text-align: center;
     width: 1.2em;
     height: 1.2em;
+    /* content: '\25B2'; */
     border: 1px solid transparent;
     border-radius: 50%;
     cursor: pointer;
@@ -159,11 +161,11 @@ h1#ques {
 .bubble {
     /* background: red; */
     color: red;
-    padding: 4px 12px;
+    /* padding: 4px 12px; */
     position: absolute;
     border-radius: 4px;
     left: 50%;
-    bottom: -15px;
+    bottom: 10px;
     transform: translateX(-50%);
 }
 #rightSide {
@@ -182,8 +184,8 @@ h1#ques {
 
 #guess {
     position: absolute;
-    left: -18%;
-    bottom: 9%;
+    left: -13%;
+    bottom: 0;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -206,6 +208,9 @@ h1#ques {
     line-height: 40px;
     color: #ff0000;
 }
+#validate, #subFlex, .reloadwrap {
+    display: none;
+}
 h2#validate {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
@@ -215,7 +220,7 @@ h2#validate {
     min-height: 25px;
 }
 #daysEst {
-    padding-right: 12%;
+    padding-right: 6%;
     border-right: 1px solid #515151;
 }
 #constData {
@@ -250,7 +255,7 @@ h2#validate {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 28px;
-    line-height: 35px;
+    line-height: 2px;
     color: #515151;
     text-align: center;
     margin: 0;
@@ -291,6 +296,49 @@ h2#validate {
     color: #2ec8ff;
     background: transparent;
 }
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -1px;
+    left: 0;
+    position: relative;
+    background-color: transparent;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #206d7a;
+}
+
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    top: -1px;
+    left: 0;
+    position: relative;
+    background-color: #ff0000;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #000000;
+}
+
+.svg-tooltip {
+    pointer-events: none;
+
+}
+.maptext {
+    padding: 1px 3px;
+    color: #FFF;
+    background-color: black;
+    width: fit-content;
+    font-size: 0.5em;
+    font-family: "Rubik";
+    /* opacity: 0; */
+}
+foreignObject { overflow: visible; }
+
 /* Mobile Devices */
 @media screen and (min-width: 300px) and (max-width: 650px){
     #tfwrapper h2 {
@@ -314,8 +362,8 @@ h2#validate {
         font-size: 14px;
     }
     #guess {
-        left: -26%;
-        font-size: 11px;
+        left: -17%;
+        font-size: 12px;
     }
     .range {
         left: 10%;
