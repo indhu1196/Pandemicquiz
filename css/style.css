@@ -267,6 +267,9 @@ h2#validate {
 .btnwrap {
     text-align: center;
 }
+.btnwrap.submitwrap {
+        margin-top: 10%;
+}
 #submitBtn {
     background-color: #000000;
     color: #fff;
