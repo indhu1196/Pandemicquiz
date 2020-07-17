@@ -343,11 +343,11 @@ h2#validate {
     }
     #constData h4 {
         font-size: 50px;
-        line-height: 80px;
+        line-height: 70px;
     }
     #daysEst h4 {
         font-size: 39px;
-        line-height: 80px;
+        line-height: 70px;
     }
     #constData p#months {
         font-size: 26px;
