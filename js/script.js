@@ -35,63 +35,68 @@ $("input[type='radio']").click(function(){
 $("#submitBtn").click(function() {
     console.log(radioValue, valueSelected)
     if( radioValue == "mumbai" && valueSelected == "14") {
-        $("#validate").text("RIGHT ANSWER");
+        $("#validate span").text("RIGHT ANSWER");
         $("#plcName").text(radioValue);
-        $("#daysEst h4 span").text("14");
+        $("#daysEst h4 ").text("14 days");
         console.log("success");
     } else if( radioValue == "delhi" && valueSelected == "18") {
         $("#validate").text("RIGHT ANSWER")
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("18");
+        $("#daysEst h4 ").text("18 days");
         // console.log("success");
     } else if( radioValue == "gujarat" && valueSelected == "0") {
         $("#validate").text("RIGHT ANSWER")
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("Ended");
+        $("#daysEst h4 ").text("Ended");
         // console.log("success");
     } else if( radioValue == "maharashtra" && valueSelected == "61") {
         $("#validate").text("RIGHT ANSWER")
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("61");
+        $("#daysEst h4 ").text("61 days");
         // console.log("success");
     } else if( radioValue == "tamilnadu" &&  valueSelected > 14 && valueSelected < 28) {
         $("#validate").text("RIGHT ANSWER")
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("14 to 28");
+        $("#daysEst h4 ").text("14 to 28 days");
         // console.log("success");
     } else if( radioValue == "karnataka" && valueSelected == "0") {
         $("#validate").text("RIGHT ANSWER")
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("Beginning");
+        $("#daysEst h4 ").text("Beginning");
         // console.log("success");
     } else {
         $("#validate").text("WRONG ANSWER")
+        $("#validate").prepend("<img src='img/x.png' /> ")
+
     }
 
 
     if( radioValue == "mumbai") {
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("14");
+        $("#daysEst h4 ").text("14 days");
         console.log("success");
     } else if( radioValue == "delhi") {
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("18");
+        $("#daysEst h4 ").text("18 days");
         // console.log("success");
     } else if( radioValue == "gujarat") {
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("Ended");
+        $("#daysEst h4 ").text("Ended");
         // console.log("success");
     } else if( radioValue == "maharashtra") {
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("61");
+        $("#daysEst h4 ").text("61 days");
         // console.log("success");
     } else if( radioValue == "tamilnadu") {
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("14 to 28");
+        $("#daysEst h4 ").text("14 to 28 days");
         // console.log("success");
     } else if( radioValue == "karnataka") {
         $("#plcName").text(radioValue)
-        $("#daysEst h4 span").text("Beginning");
+        $("#daysEst h4 ").text("Beginning");
         // console.log("success");
-    } 
+    } else {
+        $("#validate").text("Please select any of the options");
+    }
 })
+
