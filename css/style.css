@@ -294,7 +294,8 @@ h2#validate {
     line-height: 25px;
     border: none;
     outline: none;
-    color: #2ec8ff;
+/*     color: #2ec8ff; */
+    color: #555555;
     background: transparent;
 }
 /* input[type='radio']:after {
