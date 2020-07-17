@@ -11,17 +11,6 @@ function drawIndiaMap(selector){
 
     var g = svg.append("g")
 
-    // var tooltip = svg.append("foreignObject")
-    //     .attr("x", 10)
-    //     .attr("y", 10)
-    //     .attr("width", "100px")
-    //     .attr("height", "1px")
-    //     .attr("class", "svg-tooltip")
-
-    //     tooltip.append('xhtml:div')
-    //     .attr( 'class', 'tooltip')
-    //     .text("Andhaman & Nicobar Island")
-
     var city = svg.append("g")
         .append("circle")
         .attr("class","city mumbai")
@@ -30,12 +19,15 @@ function drawIndiaMap(selector){
         .attr("r", "3")
         .attr("fill", "#333333")
     
-    svg.append("text")
+    svg.append("foreignObject")
+        .attr("x", 55)
+        .attr("y", 220)
+        .attr("width", "100px")
+        .attr("height", "1px")
+        .attr("class", "svg-tooltip")
+        .append('xhtml:div')
         .attr("class","maptext mumbaitxt")
-        .attr("transform", "translate(55,220)")
-        .attr("font-family", "Rubik")
-        .attr("font-size", ".8em")
-        .attr("fill", "none")
+        .style("opacity",0)
         .text("Mumbai")
 
     var formatComma = d3.format(",")
@@ -70,7 +62,7 @@ function drawIndiaMap(selector){
             .append("foreignObject")
             .attr("x", function(d) { 
                 var centroid = geoPath.centroid(d);
-                return centroid[0]+25;
+                return centroid[0];
             })
             .attr("y", function(d) { 
                 var centroid = geoPath.centroid(d);
@@ -84,6 +76,7 @@ function drawIndiaMap(selector){
                 var statename = d.properties.ST_NM;
                 return "maptext "+ statename.replace(/ /g, "").toLowerCase()+ "txt"
             })
+            .style("opacity",0)
             .text(function(d) {
                 return d.properties.ST_NM;
             });
