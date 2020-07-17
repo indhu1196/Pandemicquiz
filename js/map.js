@@ -11,6 +11,16 @@ function drawIndiaMap(selector){
 
     var g = svg.append("g")
 
+    // var tooltip = svg.append("foreignObject")
+    //     .attr("x", 10)
+    //     .attr("y", 10)
+    //     .attr("width", "100px")
+    //     .attr("height", "1px")
+    //     .attr("class", "svg-tooltip")
+
+    //     tooltip.append('xhtml:div')
+    //     .attr( 'class', 'tooltip')
+    //     .text("Andhaman & Nicobar Island")
 
     var city = svg.append("g")
         .append("circle")
@@ -57,23 +67,46 @@ function drawIndiaMap(selector){
         var text = g.selectAll("text")
             .data(statewise)
             .enter()
-            .append("text")
-            .attr("fill", "none")
-            .attr("font-family", "Rubik")
-            .attr("font-size", ".8em")
+            .append("foreignObject")
+            .attr("x", function(d) { 
+                var centroid = geoPath.centroid(d);
+                return centroid[0]+25;
+            })
+            .attr("y", function(d) { 
+                var centroid = geoPath.centroid(d);
+                return centroid[1];
+            })
+            .attr("width", "100px")
+            .attr("height", "1px")
+            .attr("class", "svg-tooltip")
+            .append('xhtml:div')
             .attr("class", function(d,i){
                 var statename = d.properties.ST_NM;
                 return "maptext "+ statename.replace(/ /g, "").toLowerCase()+ "txt"
             })
-            .attr("transform", function(d) { 
-                var centroid = geoPath.centroid(d);
-                return "translate(" + (centroid[0]+25) + "," + centroid[1] + ")"
-            })
-            .attr("text-anchor", "middle")
-            .attr("dy", ".35em")
             .text(function(d) {
                 return d.properties.ST_NM;
             });
+        // var text = g.selectAll("text")
+        //     .data(statewise)
+        //     .enter()
+        //     .append("text")
+        //     .attr("fill", "none")
+        //     .attr("font-family", "Rubik")
+        //     .attr("font-size", ".8em")
+        //     .attr("class", function(d,i){
+        //         var statename = d.properties.ST_NM;
+        //         return "maptext "+ statename.replace(/ /g, "").toLowerCase()+ "txt"
+        //     })
+        //     .attr("transform", function(d) { 
+        //         var centroid = geoPath.centroid(d);
+        //         return "translate(" + (centroid[0]+25) + "," + centroid[1] + ")"
+        //     })
+        //     .attr("text-anchor", "middle")
+        //     .attr("dy", ".35em")
+        //     .text(function(d) {
+        //         return d.properties.ST_NM;
+        //     });
                 
     
     });//d3.json
