@@ -27,7 +27,7 @@ function setBubble(range, bubble) {
 //     var elem = document.getElementById("myBar");
 //     elem.style.width = width + "%";
 // }
-var radioValue;
+var radioValue = "undefined";
 $("input[type='radio']").click(function(){
         radioValue = $("input[name='state']:checked").val();
 });
