@@ -240,7 +240,7 @@ h2#validate {
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 50px;
-    line-height: 80px;
+    line-height: 60px;
     color: #515151;
     margin: 0;
 }
@@ -400,7 +400,7 @@ foreignObject { overflow: visible; }
     }
     #daysEst h4 {
         font-size: 39px;
-        line-height: 70px;
+        line-height: 45px;
     }
     #constData p#months {
         font-size: 26px;
